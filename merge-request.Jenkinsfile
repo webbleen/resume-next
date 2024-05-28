@@ -1,3 +1,10 @@
-node('merge-request') {
-    sh label: '', script: 'echo "Hello, World!"'
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
